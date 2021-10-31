@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import AddPost from './posts/AddPost'
+import ListPosts from './posts/ListPosts'
+import Quote from './posts/Quote'
 
 export default function Home() {
   return (
@@ -11,15 +14,16 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Read{' '}
-          <Link href="/posts/first-post">this post</Link>
+          Hello,{' '}
+          <Link href="">you</Link>
         </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        {/* <p className="description">
+          What's on your mind today?
+        </p> */}
+        <AddPost></AddPost>
 
-        <div className="grid">
+        {/* <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -47,7 +51,16 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
+        </div> */}
+
+        <div className="grid">
+          <ListPosts className="card"></ListPosts>
         </div>
+
+        <div className="quote">
+          <p>&ldquo; a quote at the bottom of the main body that refresh everytime. &rdquo; - Author</p>
+        </div>
+
       </main>
 
       <footer>
@@ -56,6 +69,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
+          Built with Next.js - {' '}
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel" className="logo" />
         </a>
