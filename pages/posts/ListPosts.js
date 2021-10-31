@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
 
-import EditPost from "./EditPost";
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField';
 
@@ -54,7 +53,6 @@ const ListPosts = () => {
             <div className="card">
                 <h1>{post.post_id}</h1>
                 <h3>{post.description}</h3>
-                <EditPost post={post}></EditPost>                    
                 <Button onClick={() => deletePost(post.post_id)}>Delete</Button>
             </div>
 
