@@ -53,7 +53,8 @@ const ListPosts = () => {
         {posts.map(post => (
             <div className="card">
                 <h1>{post.post_id}</h1>
-                <h3>{post.description}</h3>                    
+                <h3>{post.description}</h3>
+                <EditPost post={post}></EditPost>                    
                 <Button onClick={() => deletePost(post.post_id)}>Delete</Button>
             </div>
 
