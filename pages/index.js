@@ -8,19 +8,22 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>A NextJS App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Hello,{' '}
-          <Link href="">you</Link>
+          Hello,{' '} you
         </h1>
 
         {/* <p className="description">
           What's on your mind today?
         </p> */}
+
+        <div className="quote">
+          <p className="description">&ldquo; a quote at the bottom of the main body that refresh everytime. &rdquo; - Author</p>
+        </div>
         <AddPost></AddPost>
 
         {/* <div className="grid">
@@ -55,10 +58,6 @@ export default function Home() {
 
         <div className="grid">
           <ListPosts className="card"></ListPosts>
-        </div>
-
-        <div className="quote">
-          <p>&ldquo; a quote at the bottom of the main body that refresh everytime. &rdquo; - Author</p>
         </div>
 
       </main>
